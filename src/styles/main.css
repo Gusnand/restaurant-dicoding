@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+
+* {
+  font-family: "Playfair Display", serif;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -8,8 +15,8 @@ body {
   width: 100%;
 }
 
-nav {
-  /* background-color: #000; */
+header-bar .nav {
+  background-color: #c31f28;
   width: 100%;
   height: 80px;
   line-height: 80px;
@@ -18,9 +25,9 @@ nav {
   justify-content: space-between;
 }
 
-.logo a {
+header-bar .logo a {
   font-size: 39px;
-  color: red;
+  color: #fdcf00;
   font-weight: bold;
   margin-left: 100px;
 }
