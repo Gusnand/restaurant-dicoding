@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 
-
 * {
   font-family: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .main {
@@ -17,20 +20,19 @@ body {
 }
 
 nav {
-  background-color: #c31f28;
-  width: 100%;
+  background-color: #2d2d2d;
   height: 80px;
   line-height: 80px;
-  padding: 0px 100px;
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .logo a {
-  font-size: 39px;
+  font-size: 32px;
   color: #fdcf00;
   font-weight: bold;
-  margin-left: 100px;
+  margin-left: 40%;
 }
 
 a {
@@ -41,18 +43,19 @@ a {
   transition: 0.5s all ease;
 }
 
-ul {
+nav ul {
   margin: 0px;
-  padding: 0px 300px;
+  padding: 0px;
+  margin-right: 5%;
 }
 
-ul li {
-  float: left;
-  padding: 0px 15px;
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
   list-style: none;
 }
 
-ul li a:hover {
+nav ul li a:hover {
   color: #fdcf00;
 }
 
@@ -61,7 +64,8 @@ ul li a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  height: 111.5vh;
 }
 
 .content {
@@ -74,30 +78,173 @@ ul li a:hover {
 }
 
 .content h1 {
-  font-size: 50px;
+  font-size: 56px;
 }
 
 .content p {
-  padding: 0px 50px;
-  font-size: 20px;
+  padding: 0px 5px;
+  font-size: 24px;
 }
 
 button {
   background: none;
   border: 1px solid #fff;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
   padding: 10px 25px;
   border-radius: 6px;
   transition: 0.5s all ease;
 }
 
 button:hover {
-  background: black;
+  background: #fdcf00;
   color: #fff;
+  border: none;
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
 }
+
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#drawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #2d2d2d;
+  transition: left 0.3s ease;
+  z-index: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#restaurant-list {
+  margin: 24px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.restaurant-card {
+  margin: 24px;
+  width: 400px;
+  text-align: center;
+  background-color: #2d2d2d;
+  box-shadow: 0 8px 16px rgba(93, 93, 93, 0.1);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  padding: 12px;
+  color: #fff;
+}
+
+.restaurant-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.restaurant-city {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.restaurant-description {
+  font-size: 0.9em;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.restaurant-rating {
+  font-size: 1.5em;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo a {
+    font-size: 28px;
+    margin-left: 20%;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  nav ul {
+    display: none;
+    margin-right: 5%;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #drawer a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  #drawer ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  #drawer.open {
+    left: 0;
+  }
+
+  #drawer ul li a:hover {
+    color: #fdcf00;
+  }
+
+  .content {
+    margin: 0px 0px;
+  }
+
+  .content h1 {
+    font-size: 48px;
+  }
+
+  .content p {
+    font-size: 20px;
+    padding: 0px 0px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+/* 
+@media screen and (max-width: 1200px) {
+  .header {
+    background-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    background-size: 1000px;
+  }
+} */
