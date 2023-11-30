@@ -12,11 +12,23 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  min-height: 100vh;
   /* overflow: hidden; */
+}
+
+.footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
 .main {
   width: 100%;
+}
+
+.content h1 .yellow {
+  color: #fdcf00;
 }
 
 nav {
@@ -140,7 +152,7 @@ button:hover {
   width: 400px;
   text-align: center;
   background-color: #2d2d2d;
-  box-shadow: 0 8px 16px rgba(93, 93, 93, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .restaurant-card img {
@@ -150,7 +162,7 @@ button:hover {
 }
 
 .restaurant-info {
-  padding: 12px;
+  padding: 18px 36px;
   color: #fff;
 }
 
@@ -174,6 +186,7 @@ button:hover {
 .restaurant-rating {
   font-size: 1.5em;
   margin-top: 2px;
+  margin-bottom: 12px;
 }
 
 @media screen and (max-width: 768px) {
