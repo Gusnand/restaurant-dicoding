@@ -59,17 +59,23 @@ header {
     justify-content: space-between;
   }
   .logo a {
+    display: inline-block;
     font-size: 32px;
     color: $yellow-color;
     font-weight: bold;
     margin-left: 40%;
+    min-width: 44px;
+    min-height: 44px;
   }
   a {
+    display: inline-block;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 18px;
     transition: 0.5s all ease;
+    min-width: 44px;
+    min-height: 44px;
   }
   nav ul {
     margin: 0px;
@@ -80,6 +86,8 @@ header {
     display: inline-block;
     margin: 0 10px;
     list-style: none;
+    min-width: 44px;
+    min-height: 44px;
   }
   nav ul li a:hover {
     color: $yellow-color;
@@ -104,7 +112,7 @@ header {
   }
 }
 
-button {
+.content button {
   background: none;
   border: 1px solid #fff;
   color: #fff;
@@ -113,9 +121,12 @@ button {
   border-radius: 6px;
   transition: 0.5s all ease;
   margin-top: 1.5em;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-block;
 }
 
-button:hover {
+.content button:hover {
   background: $yellow-color;
   color: #fff;
   border: none;
@@ -126,11 +137,14 @@ button:hover {
   height: 100vh;
 }
 
-#menu-toggle {
+nav button {
   display: none;
   font-size: 28px;
   cursor: pointer;
   color: #fff;
+  min-width: 80px;
+  min-height: 80px;
+  background: none;
 }
 
 #drawer {
@@ -213,7 +227,7 @@ button:hover {
     margin-right: 5%;
   }
 
-  #menu-toggle {
+  nav button {
     display: block;
   }
 
@@ -249,7 +263,7 @@ button:hover {
       font-size: 20px;
       padding: 0px 0px;
     }
-    button {
+    .content button {
       font-size: 14px;
       padding: 6px 12px;
     }
